@@ -19,6 +19,7 @@ class WeeksController < ApplicationController
 
   def show
     @week = Week.find(params[:id])
+    @concept = @week.concepts.build
   end
 
   private

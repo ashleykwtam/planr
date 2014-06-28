@@ -1,1 +1,16 @@
-<%= @week.name %>
+<h1><%= @week.name %> Concept Help</h1>
+
+<ul>
+  <%= @week.concepts.each do |concept| %>
+    <li><%= concept.name %></li>
+  <% end %>
+</ul>
+
+<h3>Add a Concept</h3>
+<%= form_for [@week, @concept] do |f| %>
+  
+  <%= f.label :name %><br>  
+  <%= f.text_field :name %>
+  <%= f.submit "Add" %>
+<% end %>
+
