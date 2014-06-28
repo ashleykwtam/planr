@@ -1,0 +1,16 @@
+<h1>Create a Week</h1>
+<%= form_for @week do |f| %>
+  <% if @week.errors.any? %>
+    <h2>Invalid Form: <%= pluralize(@week.errors.count, "error") %> prohibited sign-up success</h2>
+  <% end %>
+  <ul>
+    <% @week.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  <%= f.submit "Submit" %>
+  <%= link_to "Back", weeks_url %>
+<% end %>
