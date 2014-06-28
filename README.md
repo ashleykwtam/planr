@@ -1,4 +1,4 @@
-== Planr
+**Planr**
 
 Planr started out as the hackathon project for Angelhack TO on June 21, 2014. The project aims to help teachers and students in communicating to improve upon lessons. 
 
